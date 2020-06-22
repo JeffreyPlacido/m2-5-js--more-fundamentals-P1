@@ -9,12 +9,19 @@
 //   - `typeof 3` returns 'number')
 
 function sumDigits(input) {
-  // Your code here
+  return input.length == 2
+  ? input.reduce((sum, num) => sum += num)
+  : undefined;
 }
 
 // Add 5 more test cases here! 7 total
 expect(sumDigits([2, 5]), 7);
 expect(sumDigits([-1, 0]), -1);
+expect(sumDigits([-90, 10]), -80);
+expect(sumDigits([1000, 20]), 1020);
+expect(sumDigits([44, 67, 95]), undefined);
+expect(sumDigits([-90, -50]), -140);
+expect(sumDigits([0, 0]), 0);
 
 /**
  * -------------------------------------------------------------------
