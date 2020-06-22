@@ -8,14 +8,22 @@
 // - If it's a number, return `undefined`
 
 function lastCharacter(str) {
-  // Your code here
+  if (str.charAt(str.length - 1) === '') return undefined;
+  return str.charAt(str.length - 1);
 }
+
+// or   return str != '' ? str.slice(-1) : undefined;
 
 // Step 2
 // You're given 1 test case. Add 4 more, making sure to cover all of the
 // conditions specified above (don't forget empty string and number!!)
 
 expect(lastCharacter('max'), 'x');
+expect(lastCharacter('adventure'), 'e');
+expect(lastCharacter('bacon'), 'n');
+expect(lastCharacter('pancetta'), 'a');
+expect(lastCharacter('ham'), 'm');
+expect(lastCharacter(''), undefined);
 
 // Add 4 more test cases here!
 // 🌠 NOTE 🌠
