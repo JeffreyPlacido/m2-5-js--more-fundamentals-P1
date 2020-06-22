@@ -22,11 +22,32 @@ const reverseString = (str) => {
 // 1-1
 square(decrement(square(decrement(3))));
 
+decrement(3)= 3 - 1 = 2
+square(2) = 2 * 2 = 4
+decrement(4) = 4 - 1 = 3
+square(3) = 3 * 3 = 9
+
+answer = 9
+
 // 1-2
 decrement(decrement(square(square(3))));
+
+square(3) = 3 * 3 = 9
+square(9) = 9 * 9 = 81
+decrement(81) = 81 - 1 = 80
+decrement(80) = 80 - 1 = 79
+
+answer = 79
 
 // 1-3
 duplicateString(reverseString('hello'));
 
+reverseString('hello') = "olleh"
+duplicateString('olleh') = "olleholleh"
+
 // 1-4
 reverseString(duplicateString(duplicateString('foo')));
+
+(duplicateString('foo')) = "foofoo"
+(duplicateString('foofoo')) = "foofoofoofoo"
+reverseString("foofoofoofoo") = "oofoofoofoof"
